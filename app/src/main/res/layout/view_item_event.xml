@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/tv_event_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:text="Editor's Picks"
+        android:textSize="@dimen/text_regular_3x"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:id="@+id/fl_banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_below="@+id/tv_event_title"
+        android:layout_marginTop="@dimen/margin_medium">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp">
+
+                <ImageView
+                    android:id="@+id/iv_event_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/banner" />
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="@dimen/margin_medium_2"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_share"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@drawable/circle"
+                android:padding="@dimen/margin_small"
+                android:src="@drawable/ic_share_black_24dp" />
+
+            <ImageView
+                android:id="@+id/btn_fav"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/circle"
+                android:padding="@dimen/margin_small"
+                android:src="@drawable/ic_favorite_border_black_24dp" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_date_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl_banner_container"
+        android:layout_alignLeft="@+id/tv_event_title"
+        android:layout_alignRight="@+id/fl_banner_container"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_small">
+
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAR"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_month"
+            android:layout_alignLeft="@+id/tv_month"
+            android:layout_alignRight="@+id/tv_month"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="9"
+            android:textAlignment="center"
+            android:textColor="#38354e"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_month"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_toRightOf="@+id/tv_month"
+            android:text="NYC Winter Wine Festival 2019"
+            android:textAlignment="center"
+            android:textColor="#000035"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_desc"
+            android:layout_alignLeft="@+id/tv_desc"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="PlayStation Theater"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/text_regular" />
+
+        <TextView
+            android:id="@+id/tv_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_location"
+            android:layout_alignLeft="@+id/tv_desc"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="on Eventbrite"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/text_regular" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_card_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_date_container"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        style="@style/AppTheme.ClickbleTheme">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardone"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="@dimen/margin_medium"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/iv_event_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/eventthree" />
+
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_event_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@+id/cardone"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLines="2"
+            android:text="NYC Autumn Wine Festival, A Celebaration of wine in Chelsea"
+            android:textAllCaps="false"
+            android:textColor="#000035" />
+
+        <TextView
+            android:id="@+id/tv_event_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_event_desc"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_toRightOf="@+id/cardone"
+            android:text="Sat, October 19 , 10 PM EDT"
+            android:textAllCaps="false"
+            android:textColor="#6f7287" />
+
+        <TextView
+            android:id="@+id/tv_event_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/cardone"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@+id/cardone"
+            android:text="on New York Wine Events"
+            android:textAllCaps="false"
+            android:textColor="#6f7287" />
+
+        <ImageView
+            android:id="@+id/btn_like"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/tv_event_location"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_medium"
+            style="@style/AppTheme.ClickbleThemeCircle"
+            android:src="@drawable/ic_favorite_border_black_24dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_card_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_card_one"
+        android:layout_alignLeft="@+id/tv_event_title"
+        android:layout_alignRight="@+id/fl_banner_container"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        style="@style/AppTheme.ClickbleTheme">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardtwo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="@dimen/margin_medium"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/iv_event_logo2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/eventtwo" />
+
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_event_desc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@+id/cardtwo"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLines="2"
+            android:text="Brooklyn Crush Wine &amp; Artisanal Food Festival: Fall Edition"
+            android:textAllCaps="false"
+            android:textColor="#000035" />
+
+        <TextView
+            android:id="@+id/tv_event_date2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_event_desc2"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_toRightOf="@+id/cardtwo"
+            android:text="Sat, November 19 , 10 PM EDT"
+            android:textAllCaps="false"
+            android:textColor="#6f7287" />
+
+        <TextView
+            android:id="@+id/tv_event_location2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/cardtwo"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@+id/cardtwo"
+            android:text="on New York Wine Events"
+            android:textAllCaps="false"
+            android:textColor="#6f7287" />
+
+        <ImageView
+            android:id="@+id/btn_like2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/tv_event_location2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_medium"
+            style="@style/AppTheme.ClickbleThemeCircle"
+            android:src="@drawable/ic_favorite_border_black_24dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_card_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_card_two"
+        android:layout_alignLeft="@+id/tv_event_title"
+        android:layout_alignRight="@+id/fl_banner_container"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        style="@style/AppTheme.ClickbleTheme">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardthree"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="@dimen/margin_medium"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/iv_event_logo3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/eventfour" />
+
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_event_desc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@+id/cardthree"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLines="2"
+            android:text="Grenache - make your own wine.Drinking wine all day with your friends"
+            android:textAllCaps="false"
+            android:textColor="#000035" />
+
+        <TextView
+            android:id="@+id/tv_event_date3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_event_desc3"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_toRightOf="@+id/cardthree"
+            android:text="Sat, April 27 , 8:00 PM"
+            android:textAllCaps="false"
+            android:textColor="#6f7287" />
+
+        <TextView
+            android:id="@+id/tv_event_location3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/cardthree"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@+id/cardthree"
+            android:text="on Grenache"
+            android:textAllCaps="false"
+            android:textColor="#6f7287" />
+
+        <ImageView
+            android:id="@+id/btn_like3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/tv_event_location3"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_medium"
+            style="@style/AppTheme.ClickbleThemeCircle"
+            android:src="@drawable/ic_favorite_border_black_24dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_see_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_card_three"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:background="@android:color/transparent"
+        android:text="See more events like this"
+        android:textColor="#000035"
+        android:textAllCaps="false"
+        app:backgroundTint="@android:color/transparent"
+        android:textSize="@dimen/text_regular"
+        android:theme="@style/AppTheme.ClickbleTheme"/>
+
+    <View
+        android:id="@+id/v_sep"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/btn_see_more"
+        android:layout_alignLeft="@+id/tv_event_title"
+        android:layout_alignRight="@+id/fl_banner_container"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:background="#CCCCCC" />
+
+
+</RelativeLayout>
