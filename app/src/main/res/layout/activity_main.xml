@@ -6,37 +6,105 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
-    <!--<android.support.design.widget.AppBarLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="@drawable/curve_toolbar"-->
-        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
-        <!--app:elevation="0dp">-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curve_toolbar"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
 
-        <!--<android.support.v7.widget.Toolbar-->
-            <!--android:id="@+id/toolbar"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="250dp"-->
-            <!--android:background="@drawable/curve_toolbar"-->
-            <!--android:contentInsetStart="0dp"-->
-            <!--android:contentInsetLeft="0dp"-->
-            <!--android:contentInsetEnd="0dp"-->
-            <!--android:contentInsetRight="0dp"-->
-            <!--android:paddingTop="0dp"-->
-            <!--app:contentInsetEnd="0dp"-->
-            <!--app:contentInsetLeft="0dp"-->
-            <!--app:contentInsetRight="0dp"-->
-            <!--app:contentInsetStart="0dp"-->
-            <!--app:layout_scrollFlags="scroll"-->
-            <!--app:popupTheme="@style/AppTheme.PopupOverlay"-->
-            <!--app:title="">-->
-            <!---->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curve_toolbar"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            android:paddingTop="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:layout_scrollFlags="scroll"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="">
 
-        <!--</android.support.v7.widget.Toolbar>-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <!--</android.support.design.widget.AppBarLayout>-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/colorPrimary">
 
-    <include layout="@layout/content_main" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_contain"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/curve_toolbar"
+                    android:paddingTop="@dimen/margin_xlarge">
+
+                    <ImageView
+                        android:id="@+id/iv_logo"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:padding="@dimen/margin_medium"
+                        android:src="@drawable/ic_statue_of_liberty" />
+
+                    <TextView
+                        android:id="@+id/tv_tool_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_toRightOf="@+id/iv_logo"
+                        android:text="What's good in"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_regular_2x" />
+
+                    <TextView
+                        android:id="@+id/tv_tool_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_tool_title"
+                        android:layout_marginTop="13dp"
+                        android:layout_toRightOf="@+id/iv_logo"
+                        android:text="New York"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_heading_1x"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/v_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/tv_tool_title2"
+                        android:layout_alignLeft="@+id/tv_tool_title2"
+                        android:layout_alignRight="@+id/tv_tool_title2"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="#e08a6b" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_event"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-160dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
 </android.support.design.widget.CoordinatorLayout>

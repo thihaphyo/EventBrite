@@ -24,13 +24,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//
-//        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        NestedScrollView nestedScrollView = findViewById(R.id.nst);
-        nestedScrollView.fullScroll(View.FOCUS_UP);
-        nestedScrollView.smoothScrollTo(0, 0);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
 
         rvEventList = findViewById(R.id.rv_event);
         rvEventList.setLayoutManager(new LinearLayoutManager(getApplicationContext()
